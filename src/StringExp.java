@@ -15,11 +15,23 @@ public class StringExp {
 //        System.out.println(new Integer(23));
 ////        int asdf = 'a' + 'd';
 ////        System.out.println((char) asdf);
-        String series = "";
+//        String series = "";
+//        for (int i = 0; i < 26; i++) {
+//            char ch = (char) ('a' + i);
+//            series += ch;
+//        }
+//        System.out.println(series);
+
+        StringBuilder builder = new StringBuilder();
         for (int i = 0; i < 26; i++) {
             char ch = (char) ('a' + i);
-            series += ch;
+            builder.append(ch);
         }
-        System.out.println(series);
+        System.out.println(builder.toString());
+        builder.deleteCharAt(13);
+        System.out.println(builder.toString());
+        builder.reverse();
+        System.out.println(builder.toString());
+        System.out.println(builder.length());
     }
 }
