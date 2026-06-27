@@ -1,9 +1,16 @@
+import java.util.Scanner;
+
 public class ReverseNumberRecursion {
     public static void main(String[] args) {
-        reverse(1234);
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = in.nextInt();
+        reverse(n);
         System.out.println(ans);
         System.out.println();
-        System.out.println(reverse2(1234));
+        System.out.println(reverse2(n));
+        System.out.println();
+        System.out.println(palindrome(n));
     }
     static int ans = 0;
     static void reverse(int n){
@@ -35,5 +42,8 @@ public class ReverseNumberRecursion {
         n = n/10;
         rem = (int) (rem*(Math.pow(10,c-1)));
         return rem + reverse2(n);
+    }
+    static boolean palindrome(int n){
+        return n==reverse2(n);
     }
 }
